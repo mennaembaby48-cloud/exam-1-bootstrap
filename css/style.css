@@ -22,7 +22,6 @@ ul {
     right: 0;
     left: 0;
     top: 0;
-
     box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
 }
 
@@ -31,7 +30,7 @@ ul {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 72px;
+    height: 100px;
 }
 
 .dropdown-img-2 {
@@ -44,7 +43,7 @@ ul {
 
 .dropdown-layer {
     background-color: #4e179a93;
-    height: 72px;
+    height: 100px;
     transition: all 0.3s;
 }
 .quadrant{
@@ -1022,5 +1021,10 @@ display: block;
         height: 100vh;
     }
 
-
+.dropdown-img {
+    height: 72px;
+}
+.dropdown-layer {
+    height: 72px;
+}
 }
