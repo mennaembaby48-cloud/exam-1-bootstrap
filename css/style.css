@@ -234,7 +234,9 @@ a:nth-of-type(2) .text-purple i {
 .navbar-toggler i {
     transition: color 0.3s;
 }
-
+.fs-10{
+    font-size: 10px;
+}
 
 /* ^home */
 .hero-section {
@@ -1026,5 +1028,11 @@ display: block;
 }
 .dropdown-layer {
     height: 72px;
+}
+.fs-lg-14{
+    font-size: 14px;
+}
+.fs-lg-12{
+    font-size: 12px;
 }
 }
