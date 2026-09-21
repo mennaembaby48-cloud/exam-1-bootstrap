@@ -47,11 +47,22 @@ ul {
     height: 72px;
     transition: all 0.3s;
 }
-.property-types li:hover a span{
-color: var(--main-color) !important;
+.quadrant{
+    top: -64px;
+    right:-64px;
+    width: 115px;
+    height: 115px;
+    z-index: -1;
 }
-.property-types li a span{
-transition:  color 0.3s;
+.bg-lightgreen-2{
+    background-color: #eefef3;
+}
+.property-types li:hover a span {
+    color: var(--main-color) !important;
+}
+
+.property-types li a span {
+    transition: color 0.3s;
 }
 
 .position-relative:hover .dropdown-layer {
@@ -84,11 +95,13 @@ transition:  color 0.3s;
     background-color: #dbfce7;
     color: #00a63e;
 }
-a:hover >div:nth-of-type(1) {
+
+a:hover>div:nth-of-type(1) {
     border-color: #ded7ff;
 }
-a:hover >div:nth-of-type(1) {
-transition: border-color 0.3s;
+
+a:hover>div:nth-of-type(1) {
+    transition: border-color 0.3s;
 }
 
 .resources a:hover h4 {
@@ -98,6 +111,7 @@ transition: border-color 0.3s;
 a:hover .text-purple i {
     transform: translateX(30%);
 }
+
 a .text-purple i {
     transition: transform 0.3s;
 }
@@ -106,11 +120,12 @@ a:nth-of-type(2) .p-20>div:nth-of-type(2) {
     color: #00a63e;
 }
 
-a:nth-of-type(2):hover >div:nth-of-type(1) {
+a:nth-of-type(2):hover>div:nth-of-type(1) {
     border-color: #bef9d2;
 }
-a:nth-of-type(2):hover >div:nth-of-type(1) {
-transition: border-color 0.3s;
+
+a:nth-of-type(2):hover>div:nth-of-type(1) {
+    transition: border-color 0.3s;
 }
 
 .resources a:nth-of-type(2):hover h4 {
@@ -120,6 +135,7 @@ transition: border-color 0.3s;
 a:nth-of-type(2):hover .text-purple i {
     transform: translateX(30%);
 }
+
 a:nth-of-type(2) .text-purple i {
     transition: transform 0.3s;
 }
@@ -152,9 +168,65 @@ a:nth-of-type(2) .text-purple i {
     background-color: #f5f3ff;
 }
 
-.navbar-nav li {
+.navbar-nav>li {
     transition: all 0.3s;
+    position: relative;
 }
+
+.navbar-nav>li.position-static>.nav-link{
+    position: relative;
+}
+
+.navbar-nav>li.position-static>.nav-link::before,.navbar-nav>li .nav-link::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--main-color);
+    transition: width 0.3s;
+    display: none;
+}
+.navbar-nav>li.position-static>.nav-link:hover::before,.navbar-nav>li .nav-link:hover::before {
+    width: 100%;
+}
+
+.navbar-nav .nav-link.active{
+    color: var(--main-color);
+}
+ #services .nav .nav-item:hover a{
+   color: var(--main-color);
+}
+
+#services .nav .nav-item:hover{
+    background-color: #f5f3ff;
+}
+#services .nav .nav-item:hover a{
+   color: var(--main-color);
+}
+  
+.navbar .dropdown-menu{
+    max-height:70vh;
+    overflow-y: auto;
+}
+
+#services .nav .nav-item:hover::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--main-color);
+    transition: width 0.3s;
+    display: block;
+}
+
+#services .nav .nav-item:hover .nav-link,#services .nav .nav-item:hover,#services .nav .nav-item:focus,#services .nav .nav-item:active,#services .nav .nav-link.active{
+    color: var(--main-color);
+}
+
 
 .navbar-toggler i:hover {
     color: var(--main-color);
@@ -164,9 +236,6 @@ a:nth-of-type(2) .text-purple i {
     transition: color 0.3s;
 }
 
-.h-100vh {
-    height: 100vh;
-}
 
 /* ^home */
 .hero-section {
@@ -238,6 +307,10 @@ a:nth-of-type(2) .text-purple i {
 
 .text-lightpurple {
     color: #ddd6ff;
+}
+
+.line-center{
+    text-decoration: line-through;
 }
 
 /* ^feature-section */
@@ -326,107 +399,137 @@ a:nth-of-type(2) .text-purple i {
 .feature-section .row>div>div:nth-of-type(1) {
     box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
 }
-.feature-btn{
-    background-image:linear-gradient(to right, #8022fe 60% , #9810fa 90%) ; 
-transition: all 0.3s;
+
+.feature-btn {
+    background-image: linear-gradient(to right, #8022fe 60%, #9810fa 90%);
+    transition: all 0.3s;
 }
-.feature-btn:hover{
-    background-image:linear-gradient(to right, #7007e6 60% , #8100db 90%) ; 
+
+.feature-btn:hover {
+    background-image: linear-gradient(to right, #7007e6 60%, #8100db 90%);
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 100%;
 }
 
 /* ^services-section */
 
-#services ul{
-     border-bottom: 1px solid #e5e7eb;
+#services ul {
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.service-icon{
+.service-icon {
     width: 16px;
     height: 24px;
     box-sizing: content-box;
 }
-.bg-purple-2{
+
+.bg-purple-2 {
     background-color: #ede9fe;
 }
 
-.mt-32{
+.mt-32 {
     margin-top: 32px;
 }
-.px-32{
+
+.px-32 {
     padding-inline: 32px;
 }
-.service-img{
-    height:384px;
+
+.service-img {
+    height: 384px;
     object-fit: cover;
 }
-.service-img-box{
-    box-shadow: 0 10px 15px -3px  #0000001a;
-  left: -24px;
-  bottom: -24px;
-}
-.service-img-box-2{
-        box-shadow: 0 10px 15px -3px  #0000001a;
 
-  right: -24px;
-  bottom: -24px;
+.service-img-box {
+    box-shadow: 0 10px 15px -3px #0000001a;
+    left: -24px;
+    bottom: -24px;
 }
 
-.bg-lightgreen{
+.service-img-box-2 {
+    box-shadow: 0 10px 15px -3px #0000001a;
+
+    right: -24px;
+    bottom: -24px;
+}
+
+.bg-lightgreen {
     background-color: #dbfce7;
 }
-.text-green{
+
+.text-green {
     color: #00a63e;
 }
-.bg-green-2{
+
+.bg-green-2 {
     background-color: #00a63e;
 }
 
-.bg-lightorange{
+.bg-lightorange {
     background-color: #fef9c2;
 }
-.text-darkorange{
+
+.text-darkorange {
     color: #d08700;
 }
-.bg-darkorange{
+
+.bg-darkorange {
     background-color: #d08700;
 }
-.bg-lightblue{
+
+.bg-lightblue {
     background-color: #e0e7ff;
 }
-.text-darkblue{
+
+.text-darkblue {
     color: #4f39f6;
 }
-.bg-darkblue{
+
+.bg-darkblue {
     background-color: #4f39f6;
 }
 
-#buying button:hover,#renting button:hover{
+#buying button:hover,
+#renting button:hover {
     background-color: #7008e7;
 }
-#buying button,#renting button{
-transition: all 0.3s;
+
+#buying button,
+#renting button {
+    transition: all 0.3s;
 }
-#selling button:hover{
+
+#selling button:hover {
     background-color: #008235;
 }
-#selling button{
-transition: all 0.3s;
+
+#selling button {
+    transition: all 0.3s;
 }
-#investing button:hover{
+
+#investing button:hover {
     background-color: #a65f00;
 }
-#investing button{
-transition: all 0.3s;
+
+#investing button {
+    transition: all 0.3s;
 }
-#commercial button:hover{
+
+#commercial button:hover {
     background-color: #432dd7;
 }
-#commercial button{
-transition: all 0.3s;
+
+#commercial button {
+    transition: all 0.3s;
 }
-.mt-28{
+
+.mt-28 {
     margin-top: 28px;
 }
+
 /* ^testmonials */
 
 #testmonials {
@@ -612,7 +715,8 @@ transition: all 0.3s;
 }
 
 .container-contact .heading h2,
-.feature-section .heading h2 ,#services .heading h2 {
+.feature-section .heading h2,
+#services .heading h2 {
 
     background-image: linear-gradient(to right, var(--main-color) 50%, #f89700 65%);
     background-clip: text;
@@ -764,9 +868,10 @@ transition: all 0.3s;
 }
 
 #contact form button {
-background-image:linear-gradient(to right, #8022fe 60% , #9810fa 90%) ;   
- transition: all 0.3s;
+    background-image: linear-gradient(to right, #8022fe 60%, #9810fa 90%);
+    transition: all 0.3s;
 }
+
 #contact form button:hover {
     transform: translateY(-5px);
 }
@@ -805,14 +910,21 @@ background-image:linear-gradient(to right, #8022fe 60% , #9810fa 90%) ;
 @media screen and (min-width:992px) {
 
     .dropdown-menu {
-    width: 85%;
-    left: 0;
-    right: 0;
-    margin: auto !important;
-}
+        width: 85%;
+        left: 0;
+        right: 0;
+        margin: auto !important;
+    }
+
     .navbar-nav {
         border-top: none;
     }
+    .navbar-nav>li.position-static>.nav-link::before,.navbar-nav>li .nav-link::before{
+   display: block;
+}
+.navbar-nav>li:nth-of-type(1) .nav-link::before{
+display: block;
+}
 
     .hero-section {
         padding-block: 0;
@@ -850,7 +962,8 @@ background-image:linear-gradient(to right, #8022fe 60% , #9810fa 90%) ;
     }
 
     .container-contact,
-    .navbar .container,#services .container {
+    .navbar .container,
+    #services .container {
         width: 80%;
     }
 
@@ -904,6 +1017,10 @@ background-image:linear-gradient(to right, #8022fe 60% , #9810fa 90%) ;
     .navbar-nav li:hover {
         background-color: #f8f9fa;
     }
-  
+
+    .navbar .dropdown-menu{
+        height: 100vh;
+    }
+
 
 }
