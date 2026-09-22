@@ -444,14 +444,14 @@ a:nth-of-type(2) .text-purple i {
 
 .service-img-box {
     box-shadow: 0 10px 15px -3px #0000001a;
-    left: -24px;
+    left: -12px;
     bottom: -24px;
 }
 
 .service-img-box-2 {
     box-shadow: 0 10px 15px -3px #0000001a;
 
-    right: -24px;
+    right: -12px;
     bottom: -24px;
 }
 
@@ -821,7 +821,6 @@ box-shadow: none;
 
 .contact-information {
     background-color: #f6f7f9;
-    padding: 32px;
 }
 
 .mb-20 {
@@ -837,7 +836,6 @@ box-shadow: none;
 
 .contact-card {
     background-image: linear-gradient(135deg, #8222fe 40%, #9712fb 60%);
-    padding: 32px;
 }
 
 .contact-card>div:nth-of-type(1) i {
@@ -1050,12 +1048,29 @@ display: block;
     overflow-y: auto;
 }
 .fs-lg-5{
-    font-size: 20px;
+    font-size: 20px !important;
 }
 .px--lg-32{
-    padding-inline: 32px;
+    padding-inline: 32px !important;
 }
 .fs-lg-18{
-    font-size: 18px;
+    font-size: 18px !important;
+}
+.fs-lg-3{
+    font-size: 27px !important;
+}
+.p-lg-32{
+    padding: 32px !important; 
+}
+.p-lg-24{
+    padding: 24px !important;
+}
+.service-img-box {
+    left: -24px;
+}
+
+.service-img-box-2 {
+
+    right: -24px;
 }
 }
