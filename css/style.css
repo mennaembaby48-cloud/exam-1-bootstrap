@@ -312,6 +312,12 @@ a:nth-of-type(2) .text-purple i {
     text-decoration: line-through;
 }
 
+
+.navbar-nav .dropdown-toggle.show,
+.navbar-nav .dropdown-toggle:focus,
+.navbar-nav .dropdown-toggle:active {
+    color: var(--main-color) !important;
+}
 /* ^feature-section */
 .feature-section {
     background-color: #f9fafb;
@@ -933,6 +939,11 @@ box-shadow: none;
 display: block;
 }
 
+.navbar-nav .nav-link.active::before{
+    width: 100% !important;
+    display: block !important;
+}
+
     .hero-section {
         padding-block: 0;
         padding-top: 80px;
@@ -975,7 +986,7 @@ display: block;
     }
 
     .feature-section .container {
-        width: 85%;
+        width: 80%;
         margin: auto;
     }
 
