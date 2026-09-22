@@ -607,6 +607,7 @@ a:nth-of-type(2) .text-purple i {
     padding-block: 80px;
     background-color: #f9fafb;
 }
+.p-20
 
 .border-lightpurple {
     border: 1px solid #ddd6ff;
@@ -665,11 +666,20 @@ a:nth-of-type(2) .text-purple i {
 }
 
 .accordion-item button {
-    padding-inline: 32px;
-    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
     letter-spacing: 0.5px;
     font-weight: 700;
-    font-size: 18px;
+}
+.accordion-item{
+        box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+border-radius: 12px !important;
+}
+.accordion-button:focus{
+    outline: none;
+background-color: transparent; 
+box-shadow: none;
+}
+.accordion-button:not(.collapsed){
+    background-color: transparent;
 }
 
 /* ^contact-section */
@@ -1038,5 +1048,14 @@ display: block;
 .navbar .dropdown-menu{
     max-height:100vh !important;
     overflow-y: auto;
+}
+.fs-lg-5{
+    font-size: 20px;
+}
+.px--lg-32{
+    padding-inline: 32px;
+}
+.fs-lg-18{
+    font-size: 18px;
 }
 }
